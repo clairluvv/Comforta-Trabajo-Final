@@ -1,0 +1,412 @@
+*{
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+
+    background-image: url(./imagenes/image-hero-desktop.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #E58411;
+    border-bottom: 3px solid #E58411;
+}
+
+/* CLASE DE AYUDA */
+.wrapper {
+    margin: 0 auto;
+    width: min(100% - 64px, 1440px);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+} 
+
+.header-menu {
+  display: none;  
+}
+
+/* PORTADA */
+.portada {
+    height: 1224px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    margin-top: 16px;
+}
+.portada h1 {
+    font-size: 81px ;
+    font-weight: 700;
+    text-align: center;
+}
+
+.portada p {
+    color: #E58411;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+ }
+
+ .portada p span {
+    display: block;
+ }
+
+ .portada p strong {
+  border-bottom: 3px solid #E58411;
+  text-decoration: underline;
+ }
+
+ /* BÚSQUEDA */
+.busqueda {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  max-width: 343px;
+  padding: 8px;
+
+  border: 2px solid #E58411;
+  background-color: #f3efe9;
+  border-radius: 999px;
+}
+
+.busqueda input[type=text] {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 8px 24px;
+  outline: none
+}
+
+.busqueda button {
+ background-color: #E58411;
+ border: none;
+ width: 40px;
+ height: 40px;
+ border-radius: 50px;
+ cursor: pointer;
+}
+
+.busqueda input [type=text]::placeholder {
+ color: #8d8d8d;
+}
+/* BENEFICIOS */
+.beneficios {
+ height: 500px;
+ justify-content: space-between;
+ display: flex;
+ align-items: center;
+ gap: 64px;
+ max-width: 1050px;
+}
+
+ /* PRODUCTO */
+ .productos-contenedor {
+ flex-direction: row;
+ display: flex ;
+ justify-content: space-between;
+ margin: 0;
+
+}
+.producto {
+ background-color: white;
+ padding: 24px;
+ border-radius: 15px;
+ display: flex;
+ flex-direction: column;
+
+}
+
+.productos {
+ background-color: #f7f7f7;
+ display: flex;
+ flex-direction: row;
+ gap:32px ;
+ padding: 128px 0 ;   
+}
+
+
+
+
+/* EXPERIENCIAS */
+
+.experiencias {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ gap: 96px;
+ padding: 64px 0;
+ 
+}
+
+.experiencias img {
+ transition: filter 300ms;
+}
+
+.experiencias img:hover  {
+ filter: drop-shadow(0 0 16px #e58411);
+}
+
+.experiencias-contenido {
+ display: flex;
+ flex-direction: column;
+ gap: 16px ;
+}
+
+.experiencias-contenido h3 {
+ text-transform: uppercase;
+ font-size: 16px;
+ color: #E58411;
+}
+
+.experiencias-contenido h2 {
+ font-size: 16px; 
+ font-weight: 700 ;  
+}
+
+.experiencias-contenido p {
+  font-size: 16px;
+  font-weight: 600;  
+}
+
+.experiencias-contenido a {
+ display: flex;
+ align-items: center;
+ gap: 4px;
+
+ width: fit-content;
+ 
+ font-size: 14px;
+ font-weight: 700;
+ color: #E58411;
+}
+
+/* FOOTER */
+.footer {
+ background-color: #f7f7f7;   
+}
+
+.footer-contenido {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 24px;
+}
+
+.footer-contenido span {
+ font-weight: 500;
+}
+
+.footer-contenido nav {
+display: flex;
+gap: 32px;
+}
+
+.footer-contenido .redes-sociales {
+   display: flex;
+   gap: 16px; 
+} 
+
+@media ( max-width: 768px) {
+ .body {
+   background-image: url(./imagenes/image-hero-mobile.png);
+ }   
+
+ .header-navegacion {
+   display: none; 
+ }
+ 
+ .header-iconos {
+  display:flex;
+  gap: 16px;  
+ }
+
+ .header-menu {
+  display: inline;  
+ }
+ .menu .cerrar-menu{
+  display: inline;
+  cursor: pointer;
+ }
+
+
+
+ .portada {
+  
+  height: 555px; ;  
+ }
+
+ .portada h1 {
+   font-size: 36px; 
+ }
+
+ .portada p {
+  font-size: 24px;  
+ }
+ .experiencias {
+  flex-direction: column;  
+ } 
+
+ .footer-contenido {
+  flex-direction: column column-reverse;
+  gap: 32px;
+  padding: 64px 0 32px 0;
+ }
+
+}
+
+.menu {
+ display: flex; 
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ gap: 32px;
+
+
+ background-color: black;
+ color: white;
+ font-size: 32px;
+ padding: 64px;
+ width: 100dvw;
+ height: 100dvh;
+
+ position: fixed;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+
+ 
+}
+
+.cerrar-menu {
+ display: none;
+}
+
+/* CONTACTANOS */
+
+.contactanos {
+  background-color: #F7F7F7;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  gap: 16px;
+
+  padding: 64px 0;
+
+  font-family: inherit;
+}
+
+.contactanos-titulo {
+  font-size: 54px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contactanos-descripcion {
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.contactanos-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+.contactanos-fila {
+   display: flex;
+   gap: 16px;
+}
+
+.contactanos-formulario label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactanos-formulario input,
+.contactanos-formulario textarea {
+  border: 1px solid #E58411;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.contactanos-formulario textarea {
+  resize: none;
+  min-height: 128px;
+}
+
+.contactanos-formulario button {
+  background-color: #E58411;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9em;
+}
+
+/* CAMBIO DE IMAGEN */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* ESTILO GENERAL DE BOTONES */
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  border: none;
+  color: white;
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* IZQUIERDA */
+.boton-anterior {
+  left: 10px;
+}
+
+/* DERECHA */
+.boton-siguiente {
+  right: 10px;
+}
